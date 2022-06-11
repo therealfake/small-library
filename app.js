@@ -31,6 +31,7 @@ function displayBooks() {
     for(let book of myLibrary) {
         card = document.createElement('div');
         card.classList.add('card')
+        card.dataset.book = book;
 
         title = document.createElement('div');
         title.textContent = book.title
@@ -59,9 +60,9 @@ function displayBooks() {
         removebtn.classList.add('remove-btn');
         removebtn.textContent = 'Remove';
         removebtn.addEventListener('click', (e) => {
+            myLibrary = myLibrary.filter(other_book => other_book.title !== book.title)
             bookshelf.removeChild(e.target.parentNode);
         })
-        // need to be able to remove book from actual library ds too!
 
         card.append(title, author, pages, book_status, removebtn)
         bookshelf.appendChild(card);
