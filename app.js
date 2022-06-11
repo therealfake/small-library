@@ -125,10 +125,3 @@ function resetForm() {
     bookform.reset();
 }
 
-first = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'Read');
-myLibrary.push(first);
-displayBooks();
-second = new Book('Percy Jackson', 'Rick Riordan', 366, 'Not Read');
-myLibrary.push(second);
-displayBooks();
-
