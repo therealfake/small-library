@@ -15,16 +15,16 @@
     </div>
     <div id="bookshelf"></div>  
     <div class="modal active" id="add-modal">
-        <form>
+        <form name="add-book">
             <div class="modal-title">Add Book</div>
-            <input type="text" placeholder="Title" required>
-            <input type="text" placeholder="Author" required>
-            <input type="number" placeholder="# of Pages" required>
+            <input type="text" id="title" name="title" placeholder="Title" required>
+            <input type="text" id="author" name="author" placeholder="Author" required>
+            <input type="number" id="pages" name="pages" placeholder="# of Pages" required>
             <div class="status-row">
-                <input id="status" type="checkbox">
+                <input id="status" id="status" name="status" type="checkbox" value="Read">
                 <label for="status">Read</label>
             </div>
-            <button class="submit-btn">Submit</button>
+            <button class="submit-btn" type="submit">Submit</button>
         </form>
     </div>
     <div class="active" id="overlay"></div>
