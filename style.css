@@ -36,9 +36,8 @@ body {
 
 #bookshelf {
     display: grid;
-    padding: 4rem 5rem;
-    gap: 1.5rem;
-    grid-auto-flow: column;
+    padding: 4rem 6rem;
+    gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(240px, 300px));
 }
 
