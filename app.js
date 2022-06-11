@@ -31,12 +31,20 @@ function displayBooks() {
     for(let book of myLibrary) {
         card = document.createElement('div');
         card.classList.add('card')
-        card.textContent = book.info();
+        
+        info = document.createElement('div');
+        info.textContent = book.info();
+        
+        removebtn = document.createElement('button');
+        removebtn.textContent = 'Remove'
 
+        card.appendChild(info);
+        card.appendChild(removebtn);
         bookshelf.appendChild(card);
     }
 }
 
 first = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
-// first.info()
+addBookToLibrary(first);
+displayBooks();
 
