@@ -14,16 +14,19 @@
         <button data-modal-target="#add-modal">+ Add Book</button>
     </div>
     <div id="bookshelf"></div>  
-    <div class="modal" id="add-modal">
+    <div class="modal active" id="add-modal">
         <form>
             <div class="modal-title">Add Book</div>
-            <input type="text" placeholder="Title">
-            <input type="text" placeholder="Author">
-            <input type="number" placeholder="# of Pages">
-            <input type="checkbox">
-            <button>Submit</button>
+            <input type="text" placeholder="Title" required>
+            <input type="text" placeholder="Author" required>
+            <input type="number" placeholder="# of Pages" required>
+            <div class="status-row">
+                <input id="status" type="checkbox">
+                <label for="status">Read</label>
+            </div>
+            <button class="submit-btn">Submit</button>
         </form>
     </div>
-    <div id="overlay"></div>
+    <div class="active" id="overlay"></div>
 </body>
 </html>
