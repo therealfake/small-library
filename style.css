@@ -1,6 +1,8 @@
 :root {
     --light-grey: rgb(228, 228, 228);
     --card-background: rgb(243, 229, 206);
+    --shadow: 0 5px 10px rgb(112, 109, 109);
+    /* improve shadow for specific elements */
 }
 * {
     margin: 0px;
@@ -18,7 +20,7 @@ body {
     justify-content: space-between;
     padding: 3rem 5rem;
     background-color: var(--light-grey);
-    box-shadow: 0 5px 10px rgb(112, 109, 109);
+    box-shadow: var(--shadow);
 }
 
 .header > button {
@@ -29,6 +31,7 @@ body {
     background-color: black;
     color: white;
     padding: 15px;
+    box-shadow: var(--shadow);
 }
 
 #bookshelf {
@@ -48,6 +51,7 @@ body {
     padding: 15px;
     border-radius: 15px;
     gap: 15px;
+    box-shadow: var(--shadow);
 }
 
 .title {
