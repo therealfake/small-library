@@ -24,11 +24,19 @@ body {
 .header > button {
     font-size: 1rem;
     font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 15px;
 }
 
 #bookshelf {
     display: grid;
     padding: 4rem 5rem;
+    gap: 1.5rem;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 300px));
 }
 
 .card {
@@ -37,7 +45,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--card-background);
-    width: 20vw;
     padding: 15px;
     border-radius: 15px;
     gap: 15px;
@@ -62,8 +69,7 @@ body {
     background-color: rgb(211, 74, 74);
 }
 
-.status-btn:hover,
-.remove-btn:hover {
+button:hover {
     cursor: pointer;
     filter: brightness(80%);
 }
@@ -71,9 +77,4 @@ body {
 .status-btn.read {
     background-color: rgb(74, 211, 136);
 }
-
-/* .status-btn.not-read {
-    background-color: rgb(211, 74, 74);
-} */
-
 

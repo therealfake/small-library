@@ -58,6 +58,10 @@ function displayBooks() {
         removebtn = document.createElement('button');
         removebtn.classList.add('remove-btn');
         removebtn.textContent = 'Remove';
+        removebtn.addEventListener('click', (e) => {
+            bookshelf.removeChild(e.target.parentNode);
+        })
+        // need to be able to remove book from actual library ds too!
 
         card.append(title, author, pages, book_status, removebtn)
         bookshelf.appendChild(card);
@@ -65,6 +69,8 @@ function displayBooks() {
 }
 
 first = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'Read');
+second = new Book('Percy Jackson', 'Rick Riordan', 366, 'Not Read');
 addBookToLibrary(first);
+addBookToLibrary(second);
 displayBooks();
 
