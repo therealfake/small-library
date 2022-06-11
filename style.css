@@ -1,5 +1,6 @@
 :root {
     --light-grey: rgb(228, 228, 228);
+    --card-background: rgb(243, 229, 206);
 }
 * {
     margin: 0px;
@@ -7,6 +8,7 @@
 }
 
 body {
+
 }
 
 .header {
@@ -26,11 +28,52 @@ body {
 
 #bookshelf {
     display: grid;
-    margin-top: 1rem;
+    padding: 4rem 5rem;
 }
 
 .card {
-    background-color: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-background);
     width: 20vw;
-
+    padding: 15px;
+    border-radius: 15px;
+    gap: 15px;
 }
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.author {
+    font-style: italic;
+}
+
+.status-btn,
+.remove-btn {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 2rem;
+    color: white;
+    background-color: rgb(211, 74, 74);
+}
+
+.status-btn:hover,
+.remove-btn:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.status-btn.read {
+    background-color: rgb(74, 211, 136);
+}
+
+/* .status-btn.not-read {
+    background-color: rgb(211, 74, 74);
+} */
+
+
