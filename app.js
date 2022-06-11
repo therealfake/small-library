@@ -68,7 +68,7 @@ function Book(title, author, pages, status) {
     title = bookform.elements["title"].value;
     author = bookform.elements["author"].value;
     pages = bookform.elements["pages"].value;
-    book_status = bookform.elements["status"].value == "Read" ? "Read": "Not Read Yet";
+    book_status = bookform.elements["status"].checked ? "Read": "Not Read Yet";
     new_book = new Book(title, author, pages, book_status);
     myLibrary.push(new_book);
 }
@@ -78,7 +78,7 @@ function Book(title, author, pages, status) {
  */
 function displayBooks() {
     book = myLibrary[myLibrary.length - 1];
-    
+
     card = document.createElement('div');
     card.classList.add('card')
     card.dataset.book = book;
@@ -125,11 +125,10 @@ function resetForm() {
     bookform.reset();
 }
 
-// first = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'Read');
-// second = new Book('Percy Jackson', 'Rick Riordan', 366, 'Not Read');
-// myLibrary.push(first);
-// myLibrary.push(second);
-// addBookToLibrary(first);
-// addBookToLibrary(second);
-// displayBooks();
+first = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'Read');
+myLibrary.push(first);
+displayBooks();
+second = new Book('Percy Jackson', 'Rick Riordan', 366, 'Not Read');
+myLibrary.push(second);
+displayBooks();
 
