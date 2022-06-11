@@ -11,8 +11,19 @@
 <body>
     <div class="header">
         <div class="site-name">Library</div>
-        <button>+ Add Book</button>
+        <button data-modal-target="#add-modal">+ Add Book</button>
     </div>
     <div id="bookshelf"></div>  
+    <div class="modal active" id="add-modal">
+        <form>
+            <div class="modal-title">Add Book</div>
+            <input type="text" placeholder="Title">
+            <input type="text" placeholder="Author">
+            <input type="number" placeholder="# of Pages">
+            <input type="checkbox">
+            <button>Submit</button>
+        </form>
+    </div>
+    <div class="active" id="overlay"></div>
 </body>
 </html>
